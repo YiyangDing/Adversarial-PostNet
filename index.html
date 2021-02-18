@@ -1,0 +1,1384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Post-processed_VC_demo</title>
+<style type="text/css">
+</style></head>
+<body>
+<h2><strong>Audio Samples from "Robustness of Speech Spoofing Detectors to Adversarial Post-processing of Voice Conversion</strong>"</h2>
+<h3>Paper:</h3>
+<p> Robustness of Speech Spoofing Detectors to Adversarial Post-processing of Voice Conversion</a> (Submitted to )</p>
+
+<h3>Authors: </h3>
+Yi-Yang Ding, Zhen-Hua Ling
+
+<h3>Abstract: </h3>
+With the development of speech synthesis and voice conversion techniques, the quality of artificially generated speech has been significantly improved and detecting such spoofing speech becomes crucial to automatic speaker verification (ASV) systems.
+State-of-the-art neural-network-based spoofing detection models can distinguish artificial utterances from natural ones effectively in the latest challenge on spoofing countermeasures.
+Motivated by recent advances of adversarial example generation, this paper studies the robustness of such speech spoofing detectors against adversarial attacks.
+To this end, an adversarial post-processing network (APN) is proposed which generates adversarial examples against a white-box anti-spoofing model by post-processing the speech waveforms produced by a baseline voice conversion system.
+Experimental results demonstrate the adversarial ability of our proposed APNs against the white-box anti-spoofing models which were used as the adversarial targets of APNs at the training stage.
+For example, the equal error rate (EER) of a fused detection model based on light convolution neural networks (LCNNs) increased from 0.278% to 12.743% after post-processing the  converted speech without  subjective quality degradation.
+Furthermore, the trained APNs can also perform against the detectors with either unseen structures or unseen features by increasing their EERs in our experiments.
+<p>&nbsp;</p>
+<hr>
+<h3>&nbsp;</h3>
+<h3> Comparsion of before and after post-processing for different adversarial detector. </h3>
+<h3>&nbsp;</h3>
+
+<h4> FFT-LCNN </h4>
+<p>&nbsp;</p>
+<center>------------------Target Reference------------------</center>
+<p>&nbsp;</p>
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Target Speaker</td>
+    <td width="120" nowrap="nowrap" colspan='4'></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Speaker pair</td>
+    <td width="120" nowrap="nowrap">Source</td>
+    <td width="120" nowrap="nowrap">Before</td>
+    <td width="120" nowrap="nowrap">After</td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<h4> LFCC-LCNN </h4>
+<p>&nbsp;</p>
+<center>------------------Target Reference------------------</center>
+<p>&nbsp;</p>
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Target Speaker</td>
+    <td width="120" nowrap="nowrap" colspan='4'></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Speaker pair</td>
+    <td width="120" nowrap="nowrap">Source</td>
+    <td width="120" nowrap="nowrap">Before</td>
+    <td width="120" nowrap="nowrap">After</td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<h4> FL-LCNN </h4>
+<p>&nbsp;</p>
+<center>------------------Target Reference------------------</center>
+<p>&nbsp;</p>
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Target Speaker</td>
+    <td width="120" nowrap="nowrap" colspan='4'></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap">TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M1/p275_411.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<table width="763" border="1">
+  <tbody><tr>
+    <td width="120" nowrap="nowrap">Speaker pair</td>
+    <td width="120" nowrap="nowrap">Source</td>
+    <td width="120" nowrap="nowrap">Before</td>
+    <td width="120" nowrap="nowrap">After</td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SM2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF1_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TM2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF1</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap" rowspan='2'>SF2_TF2</td>
+    <td><audio controls="">
+        <source src="wav/M2/p284_393.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_007.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_007.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="">
+        <source src="wav/M2/p284_397.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/before/gen_feat_011.wav" type="audio/wav">
+    </audio></td>
+    <td><audio controls="">
+        <source src="wav/M2_M1/after/gen_spc_011.wav" type="audio/wav">
+    </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</body></html>
